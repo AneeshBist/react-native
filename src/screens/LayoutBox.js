@@ -1,32 +1,20 @@
-import {
-  SafeAreaView,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  TouchableOpacity,
-} from "react-native";
+import { View, Text } from "react-native";
+import mainStyling from "../../styles/mainStyling";
 
 export default function LayoutBox() {
+  const styleFn = mainStyling();
   return (
-    <View style={{ height: "100%", justifyContent: "space-between" }}>
-      <View style={{ backgroundColor: "yellow", height: 200, width: 200 }}>
+    <View style={styleFn.container}>
+      <View style={styleFn.yellowBox}>
         <Text>I'm a yellow square!</Text>
       </View>
 
-      <View
-        style={{
-          alignSelf: "center",
-          backgroundColor: "blue",
-          height: 100,
-          width: 100,
-        }}
-      >
+      <View style={styleFn.blueBox}>
         <Text>I'm a blue square!</Text>
       </View>
 
-      <View style={{ alignItems: "flex-end" }}>
-        <View style={{ backgroundColor: "green", height: 150, width: 150 }}>
+      <View style={styleFn.greenBoxContainer}>
+        <View style={styleFn.greenBox}>
           <Text>I'm a green square!</Text>
         </View>
       </View>
